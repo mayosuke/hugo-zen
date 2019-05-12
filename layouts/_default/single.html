@@ -1,4 +1,8 @@
-{{ partial "header.html" . }}
+{{ if isset .Params "redirects_to" }}
+	{{ partial "header-with-redirect.html" . }}
+{{ else }}
+	{{ partial "header.html" . }}
+{{ end }}
 
 	<main role="main">
 		<article itemscope itemtype="http://schema.org/BlogPosting">
